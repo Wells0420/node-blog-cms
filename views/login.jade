@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	.leftbar 
+	.left
+	.middle
+	form.login(method='post',action='/login')
+		if admin
+			input(type='hidden',name='admin',value='true')
+		.textinput
+			label(for='useremail'): i.icon-envelope-alt 
+			input#useremail(type='text',name='useremail',placeholder='邮箱')
+		.hr
+		.textinput
+			label(for='password'): i.icon-lock
+			input#password(type='password',name='password',placeholder='密码')
+		input.signupbtn(type='submit',value='登录')
+		if err === false
+			.errtext.no_hidden 邮箱或密码不正确	
+		a.forgotpassword(href='/forgot') 忘记密码？
+	.right
+		h1.blog_name
+			a(href='/') #{config.site_name}
+		h2.blog_description #{config.site_description}

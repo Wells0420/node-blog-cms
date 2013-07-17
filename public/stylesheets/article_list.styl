@@ -1,0 +1,118 @@
+// right
+.right
+	width 320px
+	height 150px
+	position fixed
+	right 0
+	bottom 20px
+	padding-right 50px
+	text-align right
+	.blog_name
+		width 100%
+		a
+			font 600 70px site_family
+			color site_blue
+	.blog_description
+		font 400 18px site_family
+		color site_red
+// left
+.leftbar
+	width 50px
+	height 100%
+	position fixed
+	z-index -1
+	background #ddd
+	opacity .4
+.left
+	width 10px
+	height 100%
+	position fixed
+	top 0
+	left 0
+	background site_red
+	opacity .2
+.middle
+	width 650px
+	position absolute
+	top 0 
+	left 10px
+	clearfix()
+	.blog
+		width 100%
+		margin-bottom 20px
+		box-shadow 1px 1px 1px rgba(0,0,0,.26)
+		overflow hidden
+		background site_red
+		clearfix()
+		.blog_info
+			width 40px
+			height 100%
+			float left
+			.btns
+				display block
+				background #fff
+				width 40px
+				height 40px
+				opacity .3
+				text-align center
+				line-height 40px
+				&:hover
+					opacity .8
+		.blog_content
+			width 570px
+			float right
+			background #fff
+			padding 20px 
+			.article_title
+				font 400 30px site_family
+				margin-bottom 10px
+				a
+					display block
+					color site_zi
+					letter-spacing 1px
+					ellipsi()
+			.article_info
+				margin-bottom 10px
+				clearfix()
+				li
+					float left
+					color #999
+					font-size 14px
+					span
+						display inline-block
+						padding-right 10px 
+					a
+						display inline-block
+						padding-right 10px
+						color #999
+			.article_content
+				font-size 14px
+				line-height 18px
+				color #666
+.topbar
+	position fixed
+	top 10px 
+	right 0
+	width 150px
+	height 20px
+	a
+		display inline-block
+		width 60px
+		height 20px
+		line-height 20px
+		background rgba(0,0,0,.55)
+		color #fff
+		text-align center
+		font-size 13px
+		border-radius 4px
+		margin-left 5px
+	span
+		display inline-block
+		height 20px
+		line-height 20px
+		background rgba(0,0,0,.55)
+		color #fff
+		text-align center
+		font-size 13px
+		border-radius 4px
+		padding 0px 3px

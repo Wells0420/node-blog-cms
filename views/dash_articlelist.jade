@@ -1,0 +1,17 @@
+extends dash_layout
+
+block dash
+	h1 文章列表
+	table.table.table-bordered
+		tr
+			td 文章标题
+			td 作者
+			td 创建时间
+			td 其他
+		each article in articles
+			tr 
+				td
+					a(href='/edit/#{article._id}')= article.title
+				td= article.auther
+				td= article.createTime
+				td= article.tagName

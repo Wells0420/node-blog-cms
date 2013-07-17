@@ -1,0 +1,23 @@
+extends dash_layout
+
+block dash
+	h1.dash_title 站点设置
+
+	form.form-horizontal.options_form(method='post',action='/siteoption')
+		.control-group
+			label.control-label(for='site_name') site_name:
+			.controls.options_control
+				input.options_input#site_name(type='text',name='site_name',value='#{config.site_name}')
+		.control-group
+			label.control-label(for='meta_author') Meta Author:
+			.controls.options_control
+				input.options_input#meta_author(type='text',name='meta_author',value='#{config.site_author}')
+		.control-group
+			label.control-label(for='meta_keywords') Meta Keywords:
+			.controls.options_control
+				input.options_input#meta_keywords(type='text',name='meta_keywords',value='#{config.site_keywords}')
+		.control-group
+			label.control-label(for='meta_description') Meta Description:
+			.controls.options_control
+				input.options_input#meta_description(type='text',name='meta_description',value='#{config.site_description}')
+		input.btn.btn-primary.options_submit(type='submit',value='保存')

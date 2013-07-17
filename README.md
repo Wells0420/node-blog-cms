@@ -1,4 +1,4 @@
-node-blog-cms
-=============
+node-blog
+=========
 
-node-blog-cms
+nodejs-blog-cms

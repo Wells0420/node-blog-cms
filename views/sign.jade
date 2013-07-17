@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	.leftbar 
+	.left
+	.middle
+	form.signup(method='post',action='/signup')
+		.textinput
+			label(for='useremail'): i.icon-envelope-alt 
+			input#useremail(type='text',name='useremail',placeholder='邮箱')
+		.hr
+		.textinput
+			label(for='password'): i.icon-lock
+			input#password(type='password',name='password',placeholder='密码')
+		input.signupbtn(type='submit',value='确认注册')
+		.errtext 输入的邮箱格式有误或该邮箱已被注册
+	.right
+		h1.blog_name
+			a(href='/') #{config.site_name}
+		h2.blog_description #{config.site_description}

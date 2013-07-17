@@ -1,0 +1,16 @@
+extends dash_layout
+
+block dash
+	if article
+		form(method='post',action='/article/edit/'+ article._id)
+			//- input(type='hidden',name=)
+			label(for='title',) 文章标题
+				input(id='title',name='title',type='text',value='#{article.title}')
+			textarea#textcontent(name='content') #{article.content}
+			input(type='submit')
+	else
+		form(method='post',action='/article/add')
+			label(for='title',) 文章标题
+				input(id='title',name='title',type='text')
+			textarea(name='content')
+			input(type='submit')
